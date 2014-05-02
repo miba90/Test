@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppTest
 {
-    class Model
+    class View
     {
     }
 }
