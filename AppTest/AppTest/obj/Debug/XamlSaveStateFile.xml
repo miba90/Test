@@ -1,5 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\michal\source\repos\newrepo\apptest\apptest\obj\debug\intermediatexaml\apptest.exe" HashGuid="4ee44af3-e2a5-6542-6fef-1e3023b176a4" />
+    <LocalAssembly PathName="c:\users\michal\source\repos\newrepo\apptest\apptest\obj\debug\intermediatexaml\apptest.exe" HashGuid="c7f3255a-9074-6c57-e0db-92ac37f3cd41" />
+    <ReferenceAssembly PathName="c:\users\michal\source\repos\newrepo\apptest\packages\microsoft.net.http.2.2.20\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\users\michal\source\repos\newrepo\apptest\packages\microsoft.net.http.2.2.20\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

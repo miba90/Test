@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -52,6 +53,13 @@ namespace AppTest
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+
+            MyTestMethod();
+        }
+
+        private void MyTestMethod()
+        {
+            WebRequest wr = HttpWebRequest.Create(@"");
         }
 
         /// <summary>
@@ -123,6 +131,16 @@ namespace AppTest
             dc.Values["UserName"] = nameInput.Text;
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //greetingOutput.Text = nameInput.Text;
+            greetingOutput.Text = nameInput.Text;
+        }
+
+        private void toPhotoPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(this.Frame != null)
+                this.Frame.Navigate(typeof(PhotoPage));
+        }
     }
 }

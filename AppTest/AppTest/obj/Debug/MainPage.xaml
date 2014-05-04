@@ -29,6 +29,16 @@
             <Setter Property="Foreground" Value="Green" />
         </Style>
     </Page.Resources>
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton Label="AppBarButton">
+                <AppBarButton.Icon>
+                    <SymbolIcon/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </CommandBar>
+    </Page.TopAppBar>
+
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -64,14 +74,18 @@
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" FontFamily="Global User Interface"/>
         </Grid>
-        <StackPanel Grid.Row="1" Margin="120,30,0,0">
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,0">
             <TextBlock Text="What's your name?" Style="{StaticResource BigGreenStyle}"/>
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
-                <TextBox x:ConnectionId='1' x:Name="nameInput" Width="300" HorizontalAlignment="Left" FontFamily="Global User Interface"                                    />
-                <Button Content="Say &quot;Hello&quot;"/>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,20" Width="768" HorizontalAlignment="Left">
+                <TextBox x:ConnectionId='0' x:Name="nameInput" Width="300" FontFamily="Global User Interface"                                     HorizontalAlignment="Left"/>
+                <Button x:ConnectionId='0' Content="Say &quot;Hello&quot;"                      Margin="0" RenderTransformOrigin="0.77,0.513" HorizontalAlignment="Right"/>
+                <TextBox TextWrapping="Wrap" Text="TextBox" Height="36"/>
             </StackPanel>
-            <TextBlock x:Name="greetingOutput"/>
+            <TextBlock x:Name="greetingOutput" Style="{StaticResource BigGreenStyle}" MinWidth="200" MinHeight="40" Margin="3,0,0,0"/>
+            <Button x:ConnectionId='0' x:Name="toPhotoPageButton" Content="Go to photo page"                                 Margin="0,50,0,0"/>
         </StackPanel>
+
     </Grid>
 </Page>
 
